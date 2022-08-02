@@ -1,0 +1,54 @@
+@keyframes breathing-color{
+    from
+    {
+        background-color: rgb(210, 142, 255);
+    }
+    to
+    {
+        background-color: hsl(303, 100%, 85%);
+    }
+}
+
+.breathe {
+    background-color: rgb(153, 0, 255);
+
+    animation: 1s infinite alternate ease-out breathing-color;
+
+}
+
+@keyframes breathing-color{
+    from
+    {
+        background-color:  #dafffc;
+    }
+    to
+    {
+        background-color: hsl(0, 0%, 100%);
+    }
+}
+
+#mainname {
+    font-family: 'Cambira Math';
+    font-weight: bold;
+    color: navy;
+    text-align: left;
+
+}
+
+
+.profile_image {
+    height: 100px;
+    width: 100px;
+}
+
+.row_height {
+    text-size-adjust: auto;
+    height: auto;
+}
+
+.table_heads {
+    line-height: 50%;
+    font-family: "Cambria Math";
+    font-size: large;
+    color: navy;
+}
