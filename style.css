@@ -54,6 +54,14 @@
     color: navy;
 }
 
+.modal_heads {
+    line-height: 40%;
+    font-weight: bold;
+    font-family: "cursive";
+    font-size: large;
+    color: rgb(47, 47, 245);
+}
+
 .fifty_chars {
     display: inline-block;
     word-wrap: break-word;

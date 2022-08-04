@@ -62,11 +62,22 @@
 
                 <!--ICONS-->
                 <div class="col-sm-6 d-flex justify-content-between" style="width: 3cm;">
-                    <i class="fa-solid fa-comment"></i>
-                    <i class="fa-solid fa-envelope"></i>
-                    <i class="fa-solid fa-link"></i>
-                    <i class="fa-solid fa-file-circle-plus"></i>
-
+                    <button id="createTopicButton" type="button" class="btn btn-link" data-toggle="modal"
+                        data-target="#createTopic">
+                        <i class="fa-solid fa-comment"></i>
+                    </button>
+                    <button id="sendInvitationButton" type="button" class="btn btn-link" data-toggle="modal"
+                        data-target="#sendInvitation">
+                        <i class="fa-solid fa-envelope"></i>
+                    </button>
+                    <button id="shareLinkButton" type="button" class="btn btn-link" data-toggle="modal"
+                        data-target="#shareLink">
+                        <i class="fa-solid fa-link"></i>
+                    </button>
+                    <button id="shareDocumentButton" type="button" class="btn btn-link" data-toggle="modal"
+                        data-target="#shareDocument">
+                        <i class="fa-solid fa-file-circle-plus"></i>
+                    </button>
                 </div>
 
                 <!--PROFILE DROPDOWN-->
@@ -110,13 +121,331 @@
                 </div>
             </div>
         </div>
-        <div class="col-md-7">
 
+        <div class="col-md-4">
+
+            <!--MODAL:-> CREATE TOPIC-->
+            <div class="modal fade" id="createTopic" tabindex="-1" role="dialog" aria-labelledby="createTopic2"
+                aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header" style="background-color: rgba(0, 162, 255, 0.26);">
+                            <div class="row modal_heads border m-0 pl-3"
+                                style="line-height:35px; border-radius: 3mm; background-color: rgba(0, 162, 255, 0.171);">
+                                Create Topic &nbsp;
+                            </div>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+
+                        <div class="modal-body">
+                            <div class="container-fluid border mt-3 p-0" style="border-radius: 3mm;">
+                                <div class="row">
+                                    <div class="container-fluid m-2" style="width: 90%">
+                                        <div class="row">
+                                            <div class="col-sm-5 m-0 d-flex align-self-center justify-content-start">
+                                                <h6 style="margin: 0; margin-left: 1mm; padding: 0; font-weight: bold;">
+                                                    Name:
+                                                </h6>
+                                            </div>
+                                            <div class="col">
+                                                <input type="name" id="newTopicName"
+                                                    class="form-control form-control-sm" placeholder="Name" />
+                                            </div>
+                                        </div>
+                                        <div class="row mt-2">
+                                            <div class="col-sm-5 m-0 d-flex align-self-center justify-content-start">
+                                                <h6 style="margin: 0; margin-left: 1mm; padding: 0; font-weight: bold;">
+                                                    Visibility:</h6>
+                                            </div>
+                                            <div class="col">
+                                                <div class="btn-group">
+                                                    <button class="btn button-outline-secondary btn-sm dropdown-toggle"
+                                                        type="button" data-toggle="dropdown" aria-haspopup="true"
+                                                        aria-expanded="true">
+                                                        Public
+                                                    </button>
+                                                    <div class="dropdown-menu-sm">
+                                                        <div class="dropdown-menu dropdown-menu-right">
+                                                            <button
+                                                                class="btn button-outline-secondary dropdown-item m-0 p-0"
+                                                                type="button">Private</button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <div class="row mt-2">
+                                <div class="col-sm-5">
+                                </div>
+                                <div class="col d-flex align-self-center justify-content-center">
+                                    <div class="col-sm-6">
+                                        <button type="button" class="btn btn-success btn-sm">Save</button>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <button type="button" data-dismiss="modal"
+                                            class="btn btn-danger btn-sm">Cancel</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!--MODAL:-> SEND INVITATION-->
+            <div class="modal fade" id="sendInvitation" tabindex="-1" role="dialog" aria-labelledby="sendInvitation2"
+                aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header" style="background-color: rgba(0, 162, 255, 0.26);">
+                            <div class="row modal_heads border m-0 pl-3"
+                                style="line-height:35px; border-radius: 3mm; background-color: rgba(0, 162, 255, 0.171);">
+                                Send Invitation &nbsp;
+                            </div>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+
+                        <div class="modal-body">
+                            <div class="container-fluid border mt-3 p-0" style="border-radius: 3mm;">
+                                <div class="row">
+                                    <div class="container-fluid m-2" style="width: 90%">
+                                        <div class="row">
+                                            <div class="col-sm-5 m-0 d-flex align-self-center justify-content-start">
+                                                <h6 style="margin: 0; margin-left: 1mm; padding: 0; font-weight: bold;">
+                                                    Email:</h6>
+                                            </div>
+                                            <div class="col">
+                                                <input type="email" id="inviteEmail"
+                                                    class="form-control form-control-sm" placeholder="Email" />
+                                            </div>
+                                        </div>
+                                        <div class="row mt-2">
+                                            <div class="col-sm-5 m-0 d-flex align-self-center justify-content-start">
+                                                <h6 style="margin: 0; margin-left: 1mm; padding: 0; font-weight: bold;">
+                                                    Topic:</h6>
+                                            </div>
+                                            <div class="col">
+                                                <div class="btn-group">
+                                                    <button class="btn button-outline-secondary btn-sm dropdown-toggle"
+                                                        type="button" data-toggle="dropdown" aria-haspopup="true"
+                                                        aria-expanded="true">
+                                                        Topic-1
+                                                    </button>
+                                                    <div class="dropdown-menu-sm">
+                                                        <div class="dropdown-menu dropdown-menu-right">
+                                                            <button
+                                                                class="btn button-outline-secondary dropdown-item m-0 p-0"
+                                                                type="button">Topics-n</button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <div class="row mt-2">
+                                <div class="col-sm-5">
+                                </div>
+                                <div class="col d-flex align-self-center justify-content-center">
+                                    <div class="col-sm-6">
+                                        <button type="button" class="btn btn-success btn-sm">Invite</button>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <button type="button" data-dismiss="modal"
+                                            class="btn btn-danger btn-sm">Cancel</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <!--MODAL:-> SHARE LINK-->
+            <div class="modal fade" id="shareLink" tabindex="-1" role="dialog" aria-labelledby="shareLink2"
+                aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header" style="background-color: rgba(0, 162, 255, 0.26);">
+                            <div class="row modal_heads border m-0 pl-3"
+                                style="line-height:35px; border-radius: 3mm; background-color: rgba(0, 162, 255, 0.171);">
+                                Share Link &nbsp;
+                            </div>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+
+                        <div class="modal-body">
+                            <div class="container-fluid border mt-3 p-0" style="border-radius: 3mm;">
+                                <div class="row">
+                                    <div class="container-fluid m-2" style="width: 90%">
+                                        <div class="row">
+                                            <div class="col-sm-5 m-0 d-flex align-self-center justify-content-start">
+                                                <h6 style="margin: 0; margin-left: 1mm; padding: 0; font-weight: bold;">
+                                                    Link:</h6>
+                                            </div>
+                                            <div class="col">
+                                                <input type="url" id="newLink" class="form-control form-control-sm"
+                                                    placeholder="Link" />
+                                            </div>
+                                        </div>
+                                        <div class="row mt-2">
+                                            <div class="col-sm-5 m-0 d-flex align-self-center justify-content-start">
+                                                <h6 style="margin: 0; margin-left: 1mm; padding: 0; font-weight: bold;">
+                                                    Description:
+                                                </h6>
+                                            </div>
+                                            <div class="col">
+                                                <input type="text" id="newDescription" class="form-control form-control"
+                                                    style="height: 25mm;" placeholder="Description" />
+                                            </div>
+                                        </div>
+                                        <div class="row mt-2">
+                                            <div class="col-sm-5 m-0 d-flex align-self-center justify-content-start">
+                                                <h6 style="margin: 0; margin-left: 1mm; padding: 0; font-weight: bold;">
+                                                    Topic:</h6>
+                                            </div>
+                                            <div class="col">
+                                                <div class="btn-group">
+                                                    <button class="btn button-outline-secondary btn-sm dropdown-toggle"
+                                                        type="button" data-toggle="dropdown" aria-haspopup="true"
+                                                        aria-expanded="true">
+                                                        Topic-1
+                                                    </button>
+                                                    <div class="dropdown-menu-sm">
+                                                        <div class="dropdown-menu dropdown-menu-right">
+                                                            <button
+                                                                class="btn button-outline-secondary dropdown-item m-0 p-0"
+                                                                type="button">Topics-n</button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <div class="row mt-2">
+                                <div class="col-sm-5">
+                                </div>
+                                <div class="col d-flex align-self-center justify-content-center">
+                                    <div class="col-sm-6">
+                                        <button type="button" class="btn btn-success btn-sm">Share</button>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <button type="button" data-dismiss="modal"
+                                            class="btn btn-danger btn-sm">Cancel</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <!--MODAL:-> SHARE DOCUMENT-->
+            <div class="modal fade" id="shareDocument" tabindex="-1" role="dialog" aria-labelledby="shareDocument2"
+                aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header" style="background-color: rgba(0, 162, 255, 0.26);">
+                            <div class="row modal_heads border m-0 pl-3"
+                                style="line-height:35px; border-radius: 3mm; background-color: rgba(0, 162, 255, 0.171);">
+                                Share Document &nbsp;
+                            </div>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+
+                        <div class="modal-body">
+                            <div class="container-fluid border mt-3 p-0" style="border-radius: 3mm;">
+                                <div class="row">
+                                    <div class="container-fluid m-2" style="width: 90%">
+                                        <div class="row">
+                                            <div class="col-sm-5 m-0 d-flex align-self-center justify-content-start">
+                                                <h6 style="margin: 0; margin-left: 1mm; padding: 0; font-weight: bold;">
+                                                    Document:</h6>
+                                            </div>
+                                            <div class="col">
+                                                <input type="file" id="newFile"
+                                                    class="form-control-file form-control-sm"
+                                                    style="font-size: small;" />
+                                            </div>
+                                        </div>
+                                        <div class="row mt-2">
+                                            <div class="col-sm-5 m-0 d-flex align-self-center justify-content-start">
+                                                <h6 style="margin: 0; margin-left: 1mm; padding: 0; font-weight: bold;">
+                                                    Description:
+                                                </h6>
+                                            </div>
+                                            <div class="col">
+                                                <input type="text" id="newDescription" class="form-control form-control"
+                                                    style="height: 25mm;" placeholder="Description" />
+                                            </div>
+                                        </div>
+                                        <div class="row mt-2">
+                                            <div class="col-sm-5 m-0 d-flex align-self-center justify-content-start">
+                                                <h6 style="margin: 0; margin-left: 1mm; padding: 0; font-weight: bold;">
+                                                    Topic:</h6>
+                                            </div>
+                                            <div class="col">
+                                                <div class="btn-group">
+                                                    <button class="btn button-outline-secondary btn-sm dropdown-toggle"
+                                                        type="button" data-toggle="dropdown" aria-haspopup="true"
+                                                        aria-expanded="true">
+                                                        Topic-1
+                                                    </button>
+                                                    <div class="dropdown-menu-sm">
+                                                        <div class="dropdown-menu dropdown-menu-right">
+                                                            <button
+                                                                class="btn button-outline-secondary dropdown-item m-0 p-0"
+                                                                type="button">Topics-n</button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <div class="row mt-2">
+                                <div class="col-sm-5">
+                                </div>
+                                <div class="col d-flex align-self-center justify-content-center">
+                                    <div class="col-sm-6">
+                                        <button type="button" class="btn btn-success btn-sm">Share</button>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <button type="button" data-dismiss="modal"
+                                            class="btn btn-danger btn-sm">Cancel</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-    </div>
-
-
-
     </div>
 
 </body>
