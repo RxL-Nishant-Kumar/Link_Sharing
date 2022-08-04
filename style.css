@@ -48,7 +48,18 @@
 
 .table_heads {
     line-height: 50%;
+    font-weight: bold;
     font-family: "Cambria Math";
     font-size: large;
     color: navy;
+}
+
+.fifty_chars {
+    display: inline-block;
+    word-wrap: break-word;
+    overflow: hidden;
+    max-height: 3.6em; /* (Number of lines you want visible) * (line-height) */
+    line-height: 1.2em;
+    text-align:justify;
+    text-overflow: ellipsis;
 }
