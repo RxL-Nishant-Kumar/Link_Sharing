@@ -72,3 +72,18 @@
     text-align:justify;
     text-overflow: ellipsis;
 }
+
+.links {
+    padding-top: 0;
+    padding-bottom: 0;
+    padding-left: 0;
+    font-size: x-small;
+}
+
+.smaller-text {
+    font-size: 4mm;
+}
+
+p {
+    font-size: 4mm;
+}
