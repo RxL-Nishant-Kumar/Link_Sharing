@@ -1,3 +1,3 @@
 # Link_Sharing
 
-I'll get back on this later.
+Link Sharing is a web appplication developed to let users create Topics and then share either documents or links related to the corresponding topics. 
