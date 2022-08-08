@@ -1,18 +1,14 @@
-@keyframes breathing-color{
-    from
-    {
-        background-color: rgb(210, 142, 255);
-    }
-    to
-    {
-        background-color: hsl(303, 100%, 85%);
-    }
-}
-
 .breathe {
-    background-color: rgb(153, 0, 255);
 
     animation: 1s infinite alternate ease-out breathing-color;
+
+}
+
+.breathe_slow{
+
+    background-color: #dafffc;
+
+    /* animation: 10s infinite alternate ease-out breathing-color; */
 
 }
 

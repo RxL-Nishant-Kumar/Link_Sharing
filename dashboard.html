@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" class="breathe">
+<html lang="en" class="breathe_slow">
 
 <head>
     <meta charset="UTF-8">
@@ -47,7 +47,7 @@
 
 <body>
 
-    <div class="container-fluid breathe">
+    <div class="container-fluid breathe_slow">
 
         <!--TOP NAV BAR START-->
         <div class="container-fluid" style="margin-top: 2mm;">
@@ -101,7 +101,7 @@
         </div>
         <!--TOP NAV BAR END-->
 
-        <div class="row ml-3 mr-3 mb-3 d-flex justify-content-around breathe">
+        <div class="row ml-3 mr-3 mb-3 d-flex justify-content-around breathe_slow">
 
             <div class="col-sm-5">
 
@@ -112,8 +112,8 @@
                     </div>
                     <div class="col-sm-9">
                         <div class="row p-1 d-flex flex-column">
-                            <div class="font-weight-bold">Dr. Taylor Alison Swift</div>
-                            <div>@taylorswift</div>
+                            <div class="font-weight-bold pl-2">Dr. Taylor Alison Swift</div>
+                            <div class="pl-2">@taylorswift</div>
                         </div>
                         <div class="row d-flex flex-row justify-content-start">
                             <div class="col-md-6 d-flex flex-column">
@@ -152,7 +152,7 @@
                     <div class="row m-1 mt-2 border-bottom">
 
                         <!--IMAGE-->
-                        <div class="col-sm-2 d-flex align-self-center justify-content-start p-0"
+                        <div class="col-sm-2 d-flex align-self-center justify-content-around p-0"
                             style="line-height:25px;">
                             <img src="images/taylor.jpeg" class="profile_image">
                         </div>
@@ -160,16 +160,35 @@
 
                         <!--INFORMATION-->
                         <div class="col-sm-10">
-                            <div class="row m-0 p-0 d-flex align-self-center justify-content-start p-0">
-                                Grails-Topic
+                            <div class="row align-self-center justify-content-start">
+                                <div class="col-sm-6">
+                                    <h6 id="currentTopicName" class="active p-0 m-0" style="display: block;">Grails-Topic-1</h6>
+                                    <!-- <input id="newTopicName" type="text" class="form-control-sm" style="max-width: 4cm; display: block;"></input> -->
+                                </div>
+                                <div class="col-sm-6">
+                                    <!-- <div id="editCardFooter" class="row d-flex align-self-center" style="display: none">
+                                        <div class="col-sm-6">
+                                            <div class="row d-flex justify-content-start">
+                                                <button type="button" class="btn btn-outline-success btn-sm"
+                                                    style="line-height: 3mm;">Save</button>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-6">
+                                            <div class="row d-flex justify-content-start">
+                                                <button type="button" class="btn btn-outline-danger btn-sm"
+                                                    style="line-height: 3mm;">Cancel</button>
+                                            </div>
+                                        </div>
+                                    </div> -->
+                                </div>
                             </div>
                             <div class="row mt-2 d-flex align-self-center justify-content-start p-0">
                                 <div class="col-sm-4 m-0 ">
-                                    <div class="row p-1" style="line-height: 4mm;">
+                                    <div class="row pl-3" style="line-height: 4mm;">
                                         @grails
                                     </div>
                                     <div class="row p-0" style="line-height: 4mm;">
-                                        <button type="button" class="btn btn-sm pl-1 btn-link">Unsubscribe</button>
+                                        <button type="button" class="btn btn-sm pl-3 btn-link">Unsubscribe</button>
                                     </div>
                                 </div>
                                 <div class="col-sm-4 m-0 ">
@@ -198,35 +217,37 @@
                             <div class="col-sm-3 m-0 p-0"></div>
                             <div class="col-sm-3 d-flex align-self-center justify-content-end">
                                 <div class="btn-group">
-                                    <button class="btn btn-light btn-sm dropdown-toggle"
-                                        data-toggle="dropdown">
+                                    <button class="btn btn-light btn-sm dropdown-toggle" data-toggle="dropdown">
                                         Serious
                                         <span class="caret"></span>
                                     </button>
                                     <ul class="dropdown-menu" style="min-width: 20mm">
-                                        <li><a class="dropdown-item m-0 p-1" href="#">Serious</a></li>
-                                        <li><a class="dropdown-item m-0 p-1" href="#">Casual</a></li>
-                                        <li><a class="dropdown-item m-0 p-1" href="#">Very Serious</a></li>
+                                        <li><a class="dropdown-item m-0 p-1" style="cursor: pointer">Serious</a></li>
+                                        <li><a class="dropdown-item m-0 p-1" style="cursor: pointer">Casual</a></li>
+                                        <li><a class="dropdown-item m-0 p-1" style="cursor: pointer">Very Serious</a>
+                                        </li>
                                     </ul>
                                 </div>
                             </div>
                             <div class="col-sm-3 d-flex align-self-center justify-content-end">
                                 <div class="btn-group">
-                                    <button class="btn btn-light btn-sm dropdown-toggle"
-                                        data-toggle="dropdown">
+                                    <button class="btn btn-light btn-sm dropdown-toggle" data-toggle="dropdown">
                                         Private
                                         <span class="caret"></span>
                                     </button>
                                     <ul class="dropdown-menu" style="min-width: 20mm">
-                                        <li><a class="dropdown-item m-0 p-1" href="#">Private</a></li>
-                                        <li><a class="dropdown-item m-0 p-1" href="#">Public</a></li>
+                                        <li><a class="dropdown-item m-0 p-1" style="cursor: pointer">Private</a></li>
+                                        <li><a class="dropdown-item m-0 p-1" style="cursor: pointer">Public</a></li>
                                     </ul>
                                 </div>
                             </div>
                             <div class="col-sm-3 d-flex align-self-center justify-content-between">
-                                <i class="fa-solid fa-envelope"></i>
-                                <i class="fa-solid fa-file-pen"></i>
-                                <i class="fa-solid fa-trash-can"></i>
+                                <a type="button" data-toggle="modal" data-target="#sendInvitationWithTopic">
+                                    <i class="fa-solid fa-envelope"></i></a>
+                                <a type="button" data-toggle="modal" data-target="#editCard" id="editCardButton"><i
+                                        class="fa-solid fa-file-pen"></i></a>
+                                <a type="button" data-toggle="modal" data-target="#deleteTopicConfirmation">
+                                    <i class="fa-solid fa-trash-can"></i></a>
                             </div>
                         </div>
                         <!--BOTTOM LINE WITH ICONS-->
@@ -284,28 +305,26 @@
                             <div class="col-sm-3 m-0 p-0"></div>
                             <div class="col-sm-3 d-flex align-self-center justify-content-end">
                                 <div class="btn-group">
-                                    <button class="btn btn-light btn-sm dropdown-toggle"
-                                        data-toggle="dropdown">
+                                    <button class="btn btn-light btn-sm dropdown-toggle" data-toggle="dropdown">
                                         Serious
                                         <span class="caret"></span>
                                     </button>
                                     <ul class="dropdown-menu" style="min-width: 20mm">
-                                        <li><a class="dropdown-item m-0 p-1" href="#">Serious</a></li>
-                                        <li><a class="dropdown-item m-0 p-1" href="#">Casual</a></li>
-                                        <li><a class="dropdown-item m-0 p-1" href="#">Very Serious</a></li>
+                                        <li><a class="dropdown-item m-0 p-1">Serious</a></li>
+                                        <li><a class="dropdown-item m-0 p-1">Casual</a></li>
+                                        <li><a class="dropdown-item m-0 p-1">Very Serious</a></li>
                                     </ul>
                                 </div>
                             </div>
                             <div class="col-sm-3 d-flex align-self-center justify-content-end">
                                 <div class="btn-group">
-                                    <button class="btn btn-light btn-sm dropdown-toggle"
-                                        data-toggle="dropdown">
+                                    <button class="btn btn-light btn-sm dropdown-toggle" data-toggle="dropdown">
                                         Private
                                         <span class="caret"></span>
                                     </button>
                                     <ul class="dropdown-menu" style="min-width: 20mm">
-                                        <li><a class="dropdown-item m-0 p-1" href="#">Private</a></li>
-                                        <li><a class="dropdown-item m-0 p-1" href="#">Public</a></li>
+                                        <li><a class="dropdown-item m-0 p-1">Private</a></li>
+                                        <li><a class="dropdown-item m-0 p-1">Public</a></li>
                                     </ul>
                                 </div>
                             </div>
@@ -387,28 +406,26 @@
                             <div class="col-sm-3 m-0 p-0"></div>
                             <div class="col-sm-3 d-flex align-self-center justify-content-end">
                                 <div class="btn-group">
-                                    <button class="btn btn-light btn-sm dropdown-toggle"
-                                        data-toggle="dropdown">
+                                    <button class="btn btn-light btn-sm dropdown-toggle" data-toggle="dropdown">
                                         Serious
                                         <span class="caret"></span>
                                     </button>
                                     <ul class="dropdown-menu" style="min-width: 20mm">
-                                        <li><a class="dropdown-item m-0 p-1" href="#">Serious</a></li>
-                                        <li><a class="dropdown-item m-0 p-1" href="#">Casual</a></li>
-                                        <li><a class="dropdown-item m-0 p-1" href="#">Very Serious</a></li>
+                                        <li><a class="dropdown-item m-0 p-1">Serious</a></li>
+                                        <li><a class="dropdown-item m-0 p-1">Casual</a></li>
+                                        <li><a class="dropdown-item m-0 p-1">Very Serious</a></li>
                                     </ul>
                                 </div>
                             </div>
                             <div class="col-sm-3 d-flex align-self-center justify-content-end">
                                 <div class="btn-group">
-                                    <button class="btn btn-light btn-sm dropdown-toggle"
-                                        data-toggle="dropdown">
+                                    <button class="btn btn-light btn-sm dropdown-toggle" data-toggle="dropdown">
                                         Private
                                         <span class="caret"></span>
                                     </button>
                                     <ul class="dropdown-menu" style="min-width: 20mm">
-                                        <li><a class="dropdown-item m-0 p-1" href="#">Private</a></li>
-                                        <li><a class="dropdown-item m-0 p-1" href="#">Public</a></li>
+                                        <li><a class="dropdown-item m-0 p-1">Private</a></li>
+                                        <li><a class="dropdown-item m-0 p-1">Public</a></li>
                                     </ul>
                                 </div>
                             </div>
@@ -473,28 +490,26 @@
                             <div class="col-sm-3 m-0 p-0"></div>
                             <div class="col-sm-3 d-flex align-self-center justify-content-end">
                                 <div class="btn-group">
-                                    <button class="btn btn-light btn-sm dropdown-toggle"
-                                        data-toggle="dropdown">
+                                    <button class="btn btn-light btn-sm dropdown-toggle" data-toggle="dropdown">
                                         Serious
                                         <span class="caret"></span>
                                     </button>
                                     <ul class="dropdown-menu" style="min-width: 20mm">
-                                        <li><a class="dropdown-item m-0 p-1" href="#">Serious</a></li>
-                                        <li><a class="dropdown-item m-0 p-1" href="#">Casual</a></li>
-                                        <li><a class="dropdown-item m-0 p-1" href="#">Very Serious</a></li>
+                                        <li><a class="dropdown-item m-0 p-1">Serious</a></li>
+                                        <li><a class="dropdown-item m-0 p-1"">Casual</a></li>
+                                        <li><a class=" dropdown-item m-0 p-1">Very Serious</a></li>
                                     </ul>
                                 </div>
                             </div>
                             <div class="col-sm-3 d-flex align-self-center justify-content-end">
                                 <div class="btn-group">
-                                    <button class="btn btn-light btn-sm dropdown-toggle"
-                                        data-toggle="dropdown">
+                                    <button class="btn btn-light btn-sm dropdown-toggle" data-toggle="dropdown">
                                         Private
                                         <span class="caret"></span>
                                     </button>
                                     <ul class="dropdown-menu" style="min-width: 20mm">
-                                        <li><a class="dropdown-item m-0 p-1" href="#">Private</a></li>
-                                        <li><a class="dropdown-item m-0 p-1" href="#">Public</a></li>
+                                        <li><a class="dropdown-item m-0 p-1">Private</a></li>
+                                        <li><a class="dropdown-item m-0 p-1">Public</a></li>
                                     </ul>
                                 </div>
                             </div>
@@ -593,7 +608,7 @@
 
                         <!--IMAGE-->
                         <div class="col-sm-2 d-flex align-self-center justify-content-center p-0">
-                            <img src="images/olivia.jpeg" class="profile_image">
+                            <img src="images/meredith.jpeg" class="profile_image">
                         </div>
                         <!--IMAGE-->
 
@@ -601,10 +616,10 @@
                         <div class="col-sm-10">
                             <div class="row pl-2 d-flex align-self-center bd-highlight">
                                 <div class="align-self-center px-2">
-                                    Olivia Benson
+                                    Meredith Grey
                                 </div>
                                 <div class="align-self-center px-2 smaller-text text-muted">
-                                    @olivia
+                                    @greysanatomy
                                 </div>
                                 <div class="align-self-center px-2 smaller-text text-muted">
                                     just now
@@ -614,12 +629,10 @@
                             </div>
                             <div class="row m-0 px-0">
                                 <p class="fifty_chars p-0 mb-1">
-                                    In June of 2014, Taylor got a new cat she named Olivia Benson after the
-                                    character
-                                    portrayed by Mariska Hargitay on Law & Order: SVU, one of Taylor's favorite
-                                    television shows. She is the younger "sister" to Meredith Grey, and older
-                                    "sister"
-                                    to Benjamin Button. Like Meredith, Olivia Benson is a Scottish fold cat.
+                                    Meredith Grey is one of Taylor's pets, a Scottish Fold cat, named after the
+                                    character Meredith Grey (played by Ellen Pompeo) from Taylor's favorite show Grey's
+                                    Anatomy. Taylor bought Meredith on October 31, 2011. She is included in a lot of
+                                    Taylor's social media posts.
                                 </p>
                             </div>
                             <div class="row mt-1 d-flex " style="line-height:20px">
@@ -643,11 +656,9 @@
 
                 </div>
                 <!--INBOX: THE CONCLUSION-->
-
             </div>
 
         </div>
-
     </div>
     </div>
 
@@ -965,9 +976,109 @@
             </div>
         </div>
     </div>
+
+    <!--MODAL:-> SEND INVITATION WITH TOPIC NAME-->
+    <div class="modal fade" id="sendInvitationWithTopic" tabindex="-1" role="dialog"
+        aria-labelledby="sendInvitationWithTopic2" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header" style="background-color: rgba(0, 162, 255, 0.26);">
+                    <div class="row modal_heads border m-0 pl-3"
+                        style="line-height:35px; border-radius: 3mm; background-color: rgba(0, 162, 255, 0.171);">
+                        Send Invitation &nbsp;
+                    </div>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+
+                <div class="modal-body">
+                    <div class="container-fluid border mt-3 p-0" style="border-radius: 3mm;">
+                        <div class="row">
+                            <div class="container-fluid m-2" style="width: 90%">
+                                <div class="row">
+                                    <div class="col-sm-5 m-0 d-flex align-self-center justify-content-start">
+                                        <h6 style="margin: 0; margin-left: 1mm; padding: 0; font-weight: bold;">
+                                            Email:</h6>
+                                    </div>
+                                    <div class="col">
+                                        <input type="email" id="inviteEmail" class="form-control form-control-sm"
+                                            placeholder="Email" />
+                                    </div>
+                                </div>
+                                <div class="row mt-2">
+                                    <div class="col-sm-5 m-0 d-flex align-self-center justify-content-start">
+                                        <h6 style="margin: 0; margin-left: 1mm; padding: 0; font-weight: bold;">
+                                            Topic:</h6>
+                                    </div>
+                                    <div class="col">
+                                        <div class="btn-group">
+                                            <button class="btn button-outline-secondary btn-sm">
+                                                <p id="shareThisTopic" class="p-0 m-0"></p>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal-footer">
+            <div class="row mt-2">
+                <div class="col-sm-5">
+                </div>
+                <div class="col d-flex align-self-center justify-content-center">
+                    <div class="col-sm-6">
+                        <button type="button" class="btn btn-success btn-sm">Invite</button>
+                    </div>
+                    <div class="col-sm-6">
+                        <button type="button" data-dismiss="modal" class="btn btn-danger btn-sm">Cancel</button>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 
-<script src="dashboard_script.js"></script>
+    <!--MODAL:-> DELETE TOPIC CONFIRMATION-->
+    <div class="modal fade" id="deleteTopicConfirmation" tabindex="-1" role="dialog"
+        aria-labelledby="deleteTopicConfirmation2" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header" style="background-color: rgba(0, 162, 255, 0.26);">
+                    <div class="row modal_heads border m-0 pl-3"
+                        style="line-height:35px; color:rgb(255, 0, 0); border-radius: 3mm; background-color: rgb(254, 254, 5);">
+                        Are You Sure? &nbsp;
+                    </div>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+
+                <div class="modal-body">
+                    <div class="container-fluid border mt-3 pt-2 p-1" style="border-radius: 2mm;">
+                        <h6>Do you want to delete this topic permanently?</h6>
+                        <h6 id="deleteThisTopic" style="font-weight: bold;"></h6>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <div class="containder-fluid mt-2">
+                        <div class="row d-flex align-self-center justify-content-start">
+                            <div class="col">
+                                <button type="button" data-dismiss="modal"
+                                    class="btn btn-success btn-sm">Cancel</button>
+                            </div>
+                            <div class="col">
+                                <button type="button" class="btn btn-danger btn-sm" style="min-width: 4cm;">Delete
+                                    Permanently</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <script src="dashboard_script.js"></script>
 
 </body>
 
