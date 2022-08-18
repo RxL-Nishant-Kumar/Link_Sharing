@@ -8,13 +8,20 @@ $(document).ready(function () {
     $("#deleteThisTopic").text($("#currentTopicName").text())
 
 
-    // $("#editCardButton").click(function (e) {
-    //     $("#newTopicName").attr('placeholder', $("#currentTopicName").text())
-    //     $("#currentTopicName").hide();
-    //     $("#newTopicName").show();
-    //     $("editCardFooter").
+    $("#editCardButton").click(function () {
+        $("#noEditTopic").removeClass("active");
+        $("#noEditTopic").css('display', 'none');
+        $(".editTopic").addClass("active");
+        $(".editTopic").css('display', 'block');
+    });
 
-    // });
+    $("#cancelEditTopic").click(function () {
+        $("#noEditTopic").addClass("active");
+        $("#noEditTopic").css('display', 'block');
+        $(".editTopic").removeClass("active");
+        $("#newTopicName").val("");
+        $(".editTopic").css('display', 'none');
+    });
 
 
 }); 

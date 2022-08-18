@@ -160,27 +160,29 @@
 
                         <!--INFORMATION-->
                         <div class="col-sm-10">
-                            <div class="row align-self-center justify-content-start">
-                                <div class="col-sm-6">
-                                    <h6 id="currentTopicName" class="active p-0 m-0" style="display: block;">Grails-Topic-1</h6>
-                                    <!-- <input id="newTopicName" type="text" class="form-control-sm" style="max-width: 4cm; display: block;"></input> -->
+                            <div class="active row align-self-center justify-content-start">
+                                <div id="noEditTopic" class=" col-sm-12" style="display: block;">
+                                    <h6 id=" currentTopicName" class="active p-0 m-0">
+                                        Grails-Topic-1</h6>
                                 </div>
-                                <div class="col-sm-6">
-                                    <!-- <div id="editCardFooter" class="row d-flex align-self-center" style="display: none">
-                                        <div class="col-sm-6">
-                                            <div class="row d-flex justify-content-start">
-                                                <button type="button" class="btn btn-outline-success btn-sm"
-                                                    style="line-height: 3mm;">Save</button>
-                                            </div>
-                                        </div>
-                                        <div class="col-sm-6">
-                                            <div class="row d-flex justify-content-start">
-                                                <button type="button" class="btn btn-outline-danger btn-sm"
-                                                    style="line-height: 3mm;">Cancel</button>
-                                            </div>
-                                        </div>
-                                    </div> -->
+                                <!-- <div class="row align-self-center justify-content-start"> -->
+                                <div class="editTopic col-sm-6" style="display: none;">
+                                    <input id="newTopicName" type="text" class="form-control-sm"
+                                        style="max-width: 4cm;"></input>
                                 </div>
+                                <div class="editTopic col-sm-3" style="display: none;">
+                                    <div class="row d-flex justify-content-start">
+                                        <button type="button" class="btn btn-outline-success btn"
+                                            style="line-height: 3mm;">Save</button>
+                                    </div>
+                                </div>
+                                <div id="cancelEditTopic" class="editTopic col-sm-3" style="display: none;">
+                                    <div class="row d-flex justify-content-start">
+                                        <button type="button" class="btn btn-outline-danger btn"
+                                            style="line-height: 3mm;">Cancel</button>
+                                    </div>
+                                </div>
+                                <!-- </div> -->
                             </div>
                             <div class="row mt-2 d-flex align-self-center justify-content-start p-0">
                                 <div class="col-sm-4 m-0 ">
@@ -244,8 +246,7 @@
                             <div class="col-sm-3 d-flex align-self-center justify-content-between">
                                 <a type="button" data-toggle="modal" data-target="#sendInvitationWithTopic">
                                     <i class="fa-solid fa-envelope"></i></a>
-                                <a type="button" data-toggle="modal" data-target="#editCard" id="editCardButton"><i
-                                        class="fa-solid fa-file-pen"></i></a>
+                                <a type="button" id="editCardButton"><i class="fa-solid fa-file-pen"></i></a>
                                 <a type="button" data-toggle="modal" data-target="#deleteTopicConfirmation">
                                     <i class="fa-solid fa-trash-can"></i></a>
                             </div>
@@ -1023,18 +1024,18 @@
                         </div>
                     </div>
                 </div>
-            </div>
-        </div>
-        <div class="modal-footer">
-            <div class="row mt-2">
-                <div class="col-sm-5">
-                </div>
-                <div class="col d-flex align-self-center justify-content-center">
-                    <div class="col-sm-6">
-                        <button type="button" class="btn btn-success btn-sm">Invite</button>
-                    </div>
-                    <div class="col-sm-6">
-                        <button type="button" data-dismiss="modal" class="btn btn-danger btn-sm">Cancel</button>
+                <div class="modal-footer">
+                    <div class="row mt-2">
+                        <div class="col-sm-5">
+                        </div>
+                        <div class="col d-flex align-self-center justify-content-center">
+                            <div class="col-sm-6">
+                                <button type="button" class="btn btn-success btn-sm">Invite</button>
+                            </div>
+                            <div class="col-sm-6">
+                                <button type="button" data-dismiss="modal" class="btn btn-danger btn-sm">Cancel</button>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -1077,8 +1078,10 @@
                     </div>
                 </div>
             </div>
+        </div>
+    </div>
 
-            <script src="dashboard_script.js"></script>
+    <script src="dashboard_script.js"></script>
 
 </body>
 
