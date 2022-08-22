@@ -40,7 +40,7 @@
     <link rel="icon" href="images/icon.png">
     <link rel="stylesheet" href="style.css" />
 
-    <title>Dashboard</title>
+    <title>User Profile</title>
 
 </head>
 
@@ -64,26 +64,6 @@
                 <input type="search" id="form1" class="form-control" style="width: 30%; border-radius: 0.5cm;"
                     placeholder="Search" aria-label="Search" />
 
-                <!--ICONS-->
-                <div class="col-sm-6 d-flex justify-content-between" style="width: 3cm;">
-                    <button id="createTopicButton" type="button" class="btn btn-link" data-toggle="modal"
-                        data-target="#createTopic">
-                        <i class="fa-solid fa-comment"></i>
-                    </button>
-                    <button id="sendInvitationButton" type="button" class="btn btn-link" data-toggle="modal"
-                        data-target="#sendInvitation">
-                        <i class="fa-solid fa-envelope"></i>
-                    </button>
-                    <button id="shareLinkButton" type="button" class="btn btn-link" data-toggle="modal"
-                        data-target="#shareLink">
-                        <i class="fa-solid fa-link"></i>
-                    </button>
-                    <button id="shareDocumentButton" type="button" class="btn btn-link" data-toggle="modal"
-                        data-target="#shareDocument">
-                        <i class="fa-solid fa-file-circle-plus"></i>
-                    </button>
-                </div>
-
                 <!--PROFILE DROPDOWN-->
                 <div class="btn-group">
                     <button type="button" class="btn btn-danger dropdown-toggle btn-sm" data-toggle="dropdown"
@@ -102,7 +82,7 @@
 
         <div class="row ml-3 mr-3 mb-3 d-flex justify-content-around breathe_slow">
 
-            <div class="col-sm-5">
+            <div class="col-sm-4">
 
                 <!--USER PROFILE CARD-->
                 <div class="row mt-3" style="border: groove #002fff; border-radius: 3mm;">
@@ -139,18 +119,14 @@
 
                         <!--SUBSCRIPTIONS TEXT COLUMN-->
                         <div class="col-sm-6 d-flex align-self-center justify-content-start table_heads">
-                            Subscriptions
+                            Topics
                         </div>
 
-                        <!--SUBSCRIPTIONS -> VIEW ALL-->
-                        <div class="col-sm-6 d-flex flex-row-reverse">
-                            <button type="button" class="btn btn-sm btn-link">View All</button>
-                        </div>
                     </div>
                     <!--SUBSCRIPTIONS HEADER ROW ENDS HERE-->
 
                     <!--SUBSCRIPTIONS CARD 1:-> START-->
-                    <div class="row m-1 mt-2 border-bottom">
+                    <div class="row m-1 px-2 mt-2 border-bottom">
 
                         <!--IMAGE-->
                         <div class="col-sm-2 d-flex align-self-center justify-content-around p-0"
@@ -211,18 +187,18 @@
                         <div class="container-fluid row m-1">
                             <div class="col-sm-3 m-0 p-0"></div>
                             <div class="col-sm-3 d-flex align-self-center justify-content-end">
-                                <div class="btn-group">
-                                    <button class="btn btn-light btn-sm dropdown-toggle" data-toggle="dropdown">
-                                        Serious
-                                        <span class="caret"></span>
-                                    </button>
-                                    <ul class="dropdown-menu" style="min-width: 20mm">
-                                        <li><a class="dropdown-item m-0 p-1" style="cursor: pointer">Serious</a></li>
-                                        <li><a class="dropdown-item m-0 p-1" style="cursor: pointer">Casual</a></li>
-                                        <li><a class="dropdown-item m-0 p-1" style="cursor: pointer">Very Serious</a>
-                                        </li>
-                                    </ul>
-                                </div>
+                                    <div class="btn-group">
+                                        <button class="btn btn-light btn-sm dropdown-toggle" data-toggle="dropdown">
+                                            Serious
+                                            <span class="caret"></span>
+                                        </button>
+                                        <ul class="dropdown-menu" style="min-width: 20mm">
+                                            <li><a class="dropdown-item m-0 p-1" style="cursor: pointer">Serious</a></li>
+                                            <li><a class="dropdown-item m-0 p-1" style="cursor: pointer">Casual</a></li>
+                                            <li><a class="dropdown-item m-0 p-1" style="cursor: pointer">Very Serious</a>
+                                            </li>
+                                        </ul>
+                                    </div>
                             </div>
                             <div class="col-sm-3 d-flex align-self-center justify-content-end">
                                 <div class="btn-group">
@@ -236,7 +212,7 @@
                                     </ul>
                                 </div>
                             </div>
-                            <div class="col-sm-3 d-flex align-self-center justify-content-between">
+                            <div class="col-sm-3 m-0 p-0 d-flex align-self-center justify-content-between">
                                 <a type="button" data-toggle="modal" data-target="#sendInvitationWithTopic">
                                     <i class="fa-solid fa-envelope"></i></a>
                                 <a type="button" id="editCardButton"><i class="fa-solid fa-file-pen"></i></a>
@@ -250,7 +226,7 @@
                     <!--CARD 1 ENDS HERE-->
 
                     <!--SUBSCRIPTIONS CARD 2:-> START-->
-                    <div class="row m-1 mt-2 border-bottom">
+                    <div class="row m-1 mt-2 px-2 border-bottom">
 
                         <!--IMAGE-->
                         <div class="col-sm-2 d-flex align-self-center justify-content-around p-0"
@@ -344,7 +320,7 @@
                                     </ul>
                                 </div>
                             </div>
-                            <div class="col-sm-3 d-flex align-self-center justify-content-between">
+                            <div class="col-sm-3 m-0 p-0 d-flex align-self-center justify-content-between">
                                 <a type="button" data-toggle="modal" data-target="#sendInvitationWithTopic">
                                     <i class="fa-solid fa-envelope"></i></a>
                                 <a type="button" id="editCardButton"><i class="fa-solid fa-file-pen"></i></a>
@@ -370,16 +346,16 @@
                         <!--SUBSCRIPTIONS TEXT COLUMN-->
                         <div class="col-sm-12 d-flex align-self-center justify-content-start table_heads"
                             style="line-height: 8mm; background-color: rgba(0, 162, 255, 0.171);">
-                            Trending Topics
+                            Subscriptions
                         </div>
                     </div>
                     <!--SUBSCRIPTIONS HEADER ROW ENDS HERE-->
 
-                    <!--SUBSCRIPTIONS CARD:-> START-->
-                    <div class="row m-1 mt-2 border-bottom">
+                    <!--SUBSCRIPTIONS CARD 1:-> START-->
+                    <div class="row m-1 px-2 mt-2 border-bottom">
 
                         <!--IMAGE-->
-                        <div class="col-sm-2 d-flex align-self-center justify-content-start p-0"
+                        <div class="col-sm-2 d-flex align-self-center justify-content-around p-0"
                             style="line-height:25px;">
                             <img src="images/taylor.jpeg" class="profile_image">
                         </div>
@@ -387,16 +363,29 @@
 
                         <!--INFORMATION-->
                         <div class="col-sm-10">
-                            <div class="row m-0 p-0 d-flex align-self-center justify-content-start p-0">
-                                Grails-Topic
+                            <div class="row align-self-center justify-content-start">
+                                <div id="noEditCard" class="active col" style="display: block;">
+                                    <h6 id="currentTopicName" class="p-0 m-0">
+                                        Grails-Main</h6>
+                                </div>
+                                <div class="row ml-2" id="editCardForm" style="display: none;">
+                                    <form class="form-inline">
+                                        <input type="text" class="form-control-sm ml-3" id="newTopicName"
+                                            style="max-width: 4cm;">
+                                        <button type="submit" id="modifyTopicName"
+                                            class="btn btn-sm btn-outline-success ml-2">Save</button>
+                                        <button type="reset" id="cancelEditCard"
+                                            class="btn btn-sm btn-outline-danger ml-2">Cancel</button>
+                                    </form>
+                                </div>
                             </div>
                             <div class="row mt-2 d-flex align-self-center justify-content-start p-0">
                                 <div class="col-sm-4 m-0 ">
-                                    <div class="row p-1" style="line-height: 4mm;">
+                                    <div class="row pl-3" style="line-height: 4mm;">
                                         @grails
                                     </div>
                                     <div class="row p-0" style="line-height: 4mm;">
-                                        <button type="button" class="btn btn-sm pl-1 btn-link">Unsubscribe</button>
+                                        <button type="button" class="btn btn-sm pl-3 btn-link">Unsubscribe</button>
                                     </div>
                                 </div>
                                 <div class="col-sm-4 m-0 ">
@@ -430,9 +419,10 @@
                                         <span class="caret"></span>
                                     </button>
                                     <ul class="dropdown-menu" style="min-width: 20mm">
-                                        <li><a class="dropdown-item m-0 p-1">Serious</a></li>
-                                        <li><a class="dropdown-item m-0 p-1">Casual</a></li>
-                                        <li><a class="dropdown-item m-0 p-1">Very Serious</a></li>
+                                        <li><a class="dropdown-item m-0 p-1" style="cursor: pointer">Serious</a></li>
+                                        <li><a class="dropdown-item m-0 p-1" style="cursor: pointer">Casual</a></li>
+                                        <li><a class="dropdown-item m-0 p-1" style="cursor: pointer">Very Serious</a>
+                                        </li>
                                     </ul>
                                 </div>
                             </div>
@@ -443,15 +433,17 @@
                                         <span class="caret"></span>
                                     </button>
                                     <ul class="dropdown-menu" style="min-width: 20mm">
-                                        <li><a class="dropdown-item m-0 p-1">Private</a></li>
-                                        <li><a class="dropdown-item m-0 p-1">Public</a></li>
+                                        <li><a class="dropdown-item m-0 p-1" style="cursor: pointer">Private</a></li>
+                                        <li><a class="dropdown-item m-0 p-1" style="cursor: pointer">Public</a></li>
                                     </ul>
                                 </div>
                             </div>
-                            <div class="col-sm-3 d-flex align-self-center justify-content-between">
-                                <i class="fa-solid fa-envelope"></i>
-                                <i class="fa-solid fa-file-pen"></i>
-                                <i class="fa-solid fa-trash-can"></i>
+                            <div class="col-sm-3 m-0 p-0 d-flex align-self-center justify-content-between">
+                                <a type="button" data-toggle="modal" data-target="#sendInvitationWithTopic">
+                                    <i class="fa-solid fa-envelope"></i></a>
+                                <a type="button" id="editCardButton"><i class="fa-solid fa-file-pen"></i></a>
+                                <a type="button" data-toggle="modal" data-target="#deleteTopicConfirmation">
+                                    <i class="fa-solid fa-trash-can"></i></a>
                             </div>
                         </div>
                         <!--BOTTOM LINE WITH ICONS-->
@@ -459,11 +451,11 @@
                     </div>
                     <!--CARD 1 ENDS HERE-->
 
-                    <!--SUBSCRIPTIONS CARD 2:-> START-->
-                    <div class="row m-1 mt-2 border-bottom">
+                    <!--SUBSCRIPTIONS CARD 1:-> START-->
+                    <div class="row m-1 px-2 mt-2 border-bottom">
 
                         <!--IMAGE-->
-                        <div class="col-sm-2 d-flex align-self-center justify-content-start p-0"
+                        <div class="col-sm-2 d-flex align-self-center justify-content-around p-0"
                             style="line-height:25px;">
                             <img src="images/taylor.jpeg" class="profile_image">
                         </div>
@@ -471,16 +463,29 @@
 
                         <!--INFORMATION-->
                         <div class="col-sm-10">
-                            <div class="row m-0 p-0 d-flex align-self-center justify-content-start p-0">
-                                Grails-Topic
+                            <div class="row align-self-center justify-content-start">
+                                <div id="noEditCard" class="active col" style="display: block;">
+                                    <h6 id="currentTopicName" class="p-0 m-0">
+                                        Grails-Main</h6>
+                                </div>
+                                <div class="row ml-2" id="editCardForm" style="display: none;">
+                                    <form class="form-inline">
+                                        <input type="text" class="form-control-sm ml-3" id="newTopicName"
+                                            style="max-width: 4cm;">
+                                        <button type="submit" id="modifyTopicName"
+                                            class="btn btn-sm btn-outline-success ml-2">Save</button>
+                                        <button type="reset" id="cancelEditCard"
+                                            class="btn btn-sm btn-outline-danger ml-2">Cancel</button>
+                                    </form>
+                                </div>
                             </div>
                             <div class="row mt-2 d-flex align-self-center justify-content-start p-0">
                                 <div class="col-sm-4 m-0 ">
-                                    <div class="row p-1" style="line-height: 4mm;">
+                                    <div class="row pl-3" style="line-height: 4mm;">
                                         @grails
                                     </div>
                                     <div class="row p-0" style="line-height: 4mm;">
-                                        <button type="button" class="btn btn-sm pl-1 btn-link">Unsubscribe</button>
+                                        <button type="button" class="btn btn-sm pl-3 btn-link">Unsubscribe</button>
                                     </div>
                                 </div>
                                 <div class="col-sm-4 m-0 ">
@@ -514,9 +519,10 @@
                                         <span class="caret"></span>
                                     </button>
                                     <ul class="dropdown-menu" style="min-width: 20mm">
-                                        <li><a class="dropdown-item m-0 p-1">Serious</a></li>
-                                        <li><a class="dropdown-item m-0 p-1"">Casual</a></li>
-                                        <li><a class=" dropdown-item m-0 p-1">Very Serious</a></li>
+                                        <li><a class="dropdown-item m-0 p-1" style="cursor: pointer">Serious</a></li>
+                                        <li><a class="dropdown-item m-0 p-1" style="cursor: pointer">Casual</a></li>
+                                        <li><a class="dropdown-item m-0 p-1" style="cursor: pointer">Very Serious</a>
+                                        </li>
                                     </ul>
                                 </div>
                             </div>
@@ -527,20 +533,23 @@
                                         <span class="caret"></span>
                                     </button>
                                     <ul class="dropdown-menu" style="min-width: 20mm">
-                                        <li><a class="dropdown-item m-0 p-1">Private</a></li>
-                                        <li><a class="dropdown-item m-0 p-1">Public</a></li>
+                                        <li><a class="dropdown-item m-0 p-1" style="cursor: pointer">Private</a></li>
+                                        <li><a class="dropdown-item m-0 p-1" style="cursor: pointer">Public</a></li>
                                     </ul>
                                 </div>
                             </div>
-                            <div class="col-sm-3 d-flex align-self-center justify-content-between">
-                                <i class="fa-solid fa-envelope"></i>
-                                <i class="fa-solid fa-file-pen"></i>
-                                <i class="fa-solid fa-trash-can"></i>
+                            <div class="col-sm-3 m-0 p-0 d-flex align-self-center justify-content-between">
+                                <a type="button" data-toggle="modal" data-target="#sendInvitationWithTopic">
+                                    <i class="fa-solid fa-envelope"></i></a>
+                                <a type="button" id="editCardButton"><i class="fa-solid fa-file-pen"></i></a>
+                                <a type="button" data-toggle="modal" data-target="#deleteTopicConfirmation">
+                                    <i class="fa-solid fa-trash-can"></i></a>
                             </div>
                         </div>
                         <!--BOTTOM LINE WITH ICONS-->
+
                     </div>
-                    <!--CARD 2 ENDS HERE-->
+                    <!--CARD 1 ENDS HERE-->
 
                 </div>
                 <!--TRENDING TABLE:-> END-->
@@ -548,7 +557,7 @@
 
             </div>
 
-            <div class="col-sm-6">
+            <div class="col-sm-7">
 
                 <!--INBOX: THE BEGINNING-->
                 <div class="container-fluid mt-3 p-0" style="border: groove #002fff; border-radius: 4mm;">
@@ -564,7 +573,12 @@
 
                         <!--INBOX -> VIEW ALL-->
                         <div class="col-sm-6 d-flex flex-row-reverse">
-                            <button type="button" class="btn btn-sm btn-link">View All</button>
+                            <form class="d-flex" role="search">
+                                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search"
+                                    style="border-radius: 3mm;">
+                                <button class="btn btn-outline-success" type="submit" style="border-radius: 3mm;"><i
+                                        class="fa-solid fa-magnifying-glass"></i></button>
+                            </form>
                         </div>
                     </div>
                     <!--INBOX HEADER ROW ENDS HERE-->

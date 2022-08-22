@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" class="breathe_slow">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
@@ -40,17 +40,16 @@
     <link rel="icon" href="images/icon.png">
     <link rel="stylesheet" href="style.css" />
 
-    <title>Dashboard</title>
+    <title>Topics</title>
 
 </head>
-
 
 <body>
 
     <div class="container-fluid breathe_slow">
 
         <!--TOP NAV BAR START-->
-        <div class="container-fluid" style="margin-top: 2mm;">
+        <div class="container-fluid pt-2 breathe_slow">
             <nav class="navbar" style="background-color: #dafffc; border-radius: 0.2cm;">
 
                 <!--LOGO-->
@@ -60,16 +59,13 @@
                     <!--<span id="mainname" class="h4 fw-bold mb-0">Link Sharing</span>-->
                 </a>
 
+
                 <!--SEARCH BAR-->
                 <input type="search" id="form1" class="form-control" style="width: 30%; border-radius: 0.5cm;"
                     placeholder="Search" aria-label="Search" />
 
                 <!--ICONS-->
                 <div class="col-sm-6 d-flex justify-content-between" style="width: 3cm;">
-                    <button id="createTopicButton" type="button" class="btn btn-link" data-toggle="modal"
-                        data-target="#createTopic">
-                        <i class="fa-solid fa-comment"></i>
-                    </button>
                     <button id="sendInvitationButton" type="button" class="btn btn-link" data-toggle="modal"
                         data-target="#sendInvitation">
                         <i class="fa-solid fa-envelope"></i>
@@ -99,18 +95,153 @@
                 </div>
             </nav>
         </div>
+        <!--TOP NAV BAR END-->
 
-        <div class="row ml-3 mr-3 mb-3 d-flex justify-content-around breathe_slow">
+        <div class="row ml-3 mr-3 mb-3d-flex justify-content-around breathe_slow">
 
-            <div class="col-sm-5">
+            <div class="col-sm-4">
 
-                <!--USER PROFILE CARD-->
+                <!--TOPIC TABLE START-->
                 <div class="row mt-3" style="border: groove #002fff; border-radius: 3mm;">
-                    <div class="row m-2 p-0">
+
+                    <!--TOPIC HEADER ROW-->
+                    <div class="container-fluid row m-0 p-0" style="border-bottom: groove #002fff; line-height:7mm;
+                        background-color: rgba(0, 162, 255, 0.171);">
+
+                        <!--SUBSCRIPTIONS TEXT COLUMN-->
+                        <div class="mx-2 px-1 table_heads">
+                            <span>Topic: </span>
+                            &nbsp; <span id="thisTopicName">Grails</span>
+                        </div>
+
+                    </div>
+                    <!--TOPIC HEADER ROW ENDS HERE-->
+
+                    <!--TOPIC CARD:-> START-->
+                    <div class="row p-0 pl-2 m-1 mt-2">
+
+                        <!--IMAGE-->
+                        <div class="col-sm-2 d-flex align-self-center justify-content-around p-0"
+                            style="line-height:25px;">
+                            <img src="images/taylor.jpeg" class="profile_image">
+                        </div>
+                        <!--IMAGE-->
+
+                        <!--INFORMATION-->
+                        <div class="col-sm-10">
+                            <div class="row align-self-center justify-content-start">
+                                <div id="noEditTopic" class="active col" style="display: block;">
+                                    <h6 id="currentTopicName" class="p-0 m-0">
+                                        Grails-Main
+                                        <large class="text-muted">(Private)</large>
+                                    </h6>
+                                </div>
+                                <div class="row ml-2" id="editTopicForm" style="display: none;">
+                                    <form class="form-inline">
+                                        <input type="text" class="form-control-sm ml-3" id="newTopicName"
+                                            style="max-width: 4cm;">
+                                        <button type="submit" id="modifyTopicName"
+                                            class="btn btn-sm btn-outline-success ml-2">Save</button>
+                                        <button type="reset" id="cancelEditTopic"
+                                            class="btn btn-sm btn-outline-danger ml-2">Cancel</button>
+                                    </form>
+                                </div>
+                            </div>
+
+                            <div class="row mt-2 d-flex align-self-center justify-content-start p-0">
+                                <div class="col-sm-4 m-0 ">
+                                    <div class="row pl-3" style="line-height: 4mm;">
+                                        @grails
+                                    </div>
+                                    <div class="row p-0" style="line-height: 4mm;">
+                                        <button type="button" class="btn btn-sm pl-3 btn-link">Unsubscribe</button>
+                                    </div>
+                                </div>
+                                <div class="col-sm-4 m-0 ">
+                                    <div class="row p-1" style="line-height: 4mm;">
+                                        Subscriptions
+                                    </div>
+                                    <div class="row p-0" style="line-height: 4mm;">
+                                        &nbsp; 30
+                                    </div>
+                                </div>
+                                <div class="col-sm-4 m-0 ">
+                                    <div class="row p-1" style="line-height: 4mm;">
+                                        Posts
+                                    </div>
+                                    <div class="row p-0" style="line-height: 4mm;">
+                                        &nbsp; 50
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!--INFORMATION-->
+
+                        <!--BOTTOM LINE WITH ICONS-->
+
+                        <div class="container-fluid row m-1">
+                            <div class="col-sm-3 m-0 p-0"></div>
+                            <div class="col-sm-3 d-flex align-self-center justify-content-end">
+                                <div class="btn-group">
+                                    <button class="btn btn-light btn-sm dropdown-toggle" data-toggle="dropdown">
+                                        Serious
+                                        <span class="caret"></span>
+                                    </button>
+                                    <ul class="dropdown-menu" style="min-width: 20mm">
+                                        <li><a class="dropdown-item m-0 p-1" style="cursor: pointer">Serious</a></li>
+                                        <li><a class="dropdown-item m-0 p-1" style="cursor: pointer">Casual</a></li>
+                                        <li><a class="dropdown-item m-0 p-1" style="cursor: pointer">Very Serious</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="col-sm-3 d-flex align-self-center justify-content-end">
+                                <div class="btn-group">
+                                    <button class="btn btn-light btn-sm dropdown-toggle" data-toggle="dropdown">
+                                        Private
+                                        <span class="caret"></span>
+                                    </button>
+                                    <ul class="dropdown-menu" style="min-width: 20mm">
+                                        <li><a class="dropdown-item m-0 p-1" style="cursor: pointer">Private</a></li>
+                                        <li><a class="dropdown-item m-0 p-1" style="cursor: pointer">Public</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="col-sm-3 m-0 p-1 d-flex align-self-center justify-content-between">
+                                <a type="button" data-toggle="modal" data-target="#sendInvitationWithTopic">
+                                    <i class="fa-solid fa-envelope"></i></a>
+                                <a type="button" id="editTopicName"><i class="fa-solid fa-file-pen"></i></a>
+                                <a type="button" data-toggle="modal" data-target="#deleteTopicConfirmation">
+                                    <i class="fa-solid fa-trash-can"></i></a>
+                            </div>
+                        </div>
+                        <!--BOTTOM LINE WITH ICONS-->
+
+                    </div>
+                    <!--CARD ENDS HERE-->
+                </div>
+
+
+                <!--USERS TABLE START-->
+                <div class="row mt-3" style="border: groove #002fff; border-radius: 3mm;">
+
+                    <!--USERS HEADER ROW-->
+                    <div class="container-fluid row m-0 p-0 d-flex justify-content-between" style="border-bottom: groove #002fff; line-height:7mm;
+                        background-color: rgba(0, 162, 255, 0.171);">
+
+                        <!--SUBSCRIPTIONS TEXT COLUMN-->
+                        <div class="col-sm-6 d-flex align-self-center justify-content-start table_heads">
+                            Users:&nbsp;Grails
+                        </div>
+                    </div>
+                    <!--USERS HEADER ROW ENDS HERE-->
+
+                    <!--USER PROFILE CARD-->
+                    <div class="containder-fluid row pl-2 m-2 p-0 mt-2 border-bottom">
                         <div class="col-sm-3 d-flex align-self-center justify-content-center">
                             <img src="images/taylor.jpeg" class="profile_image">
                         </div>
-                        <div class="col-sm-9">
+                        <div class="col-sm-9 pl-4">
                             <div class="row p-1 d-flex flex-column">
                                 <div class="font-weight-bold pl-2">Dr. Taylor Alison Swift</div>
                                 <div class="pl-2">@taylorswift</div>
@@ -127,428 +258,16 @@
                             </div>
                         </div>
                     </div>
-                </div>
-                <!--USER PROFILE CARD ENDS HERE-->
+                    <!--USER PROFILE CARD ENDS HERE-->
 
-                <!--SUBSCRIPTIONS TABLE START-->
-                <div class="row mt-3" style="border: groove #002fff; border-radius: 3mm;">
 
-                    <!--SUBSCRIPTIONS HEADER ROW-->
-                    <div class="container-fluid row m-0 p-0 d-flex justify-content-between" style="border-bottom: groove #002fff; line-height:7mm;
-                        background-color: rgba(0, 162, 255, 0.171);">
 
-                        <!--SUBSCRIPTIONS TEXT COLUMN-->
-                        <div class="col-sm-6 d-flex align-self-center justify-content-start table_heads">
-                            Subscriptions
-                        </div>
 
-                        <!--SUBSCRIPTIONS -> VIEW ALL-->
-                        <div class="col-sm-6 d-flex flex-row-reverse">
-                            <button type="button" class="btn btn-sm btn-link">View All</button>
-                        </div>
-                    </div>
-                    <!--SUBSCRIPTIONS HEADER ROW ENDS HERE-->
-
-                    <!--SUBSCRIPTIONS CARD 1:-> START-->
-                    <div class="row m-1 mt-2 border-bottom">
-
-                        <!--IMAGE-->
-                        <div class="col-sm-2 d-flex align-self-center justify-content-around p-0"
-                            style="line-height:25px;">
-                            <img src="images/taylor.jpeg" class="profile_image">
-                        </div>
-                        <!--IMAGE-->
-
-                        <!--INFORMATION-->
-                        <div class="col-sm-10">
-                            <div class="row align-self-center justify-content-start">
-                                <div id="noEditCard" class="active col" style="display: block;">
-                                    <h6 id="currentTopicName" class="p-0 m-0">
-                                        Grails-Main</h6>
-                                </div>
-                                <div class="row ml-2" id="editCardForm" style="display: none;">
-                                    <form class="form-inline">
-                                        <input type="text" class="form-control-sm ml-3" id="newTopicName"
-                                            style="max-width: 4cm;">
-                                        <button type="submit" id="modifyTopicName"
-                                            class="btn btn-sm btn-outline-success ml-2">Save</button>
-                                        <button type="reset" id="cancelEditCard"
-                                            class="btn btn-sm btn-outline-danger ml-2">Cancel</button>
-                                    </form>
-                                </div>
-                            </div>
-                            <div class="row mt-2 d-flex align-self-center justify-content-start p-0">
-                                <div class="col-sm-4 m-0 ">
-                                    <div class="row pl-3" style="line-height: 4mm;">
-                                        @grails
-                                    </div>
-                                    <div class="row p-0" style="line-height: 4mm;">
-                                        <button type="button" class="btn btn-sm pl-3 btn-link">Unsubscribe</button>
-                                    </div>
-                                </div>
-                                <div class="col-sm-4 m-0 ">
-                                    <div class="row p-1" style="line-height: 4mm;">
-                                        Subscriptions
-                                    </div>
-                                    <div class="row p-0" style="line-height: 4mm;">
-                                        &nbsp; 30
-                                    </div>
-                                </div>
-                                <div class="col-sm-4 m-0 ">
-                                    <div class="row p-1" style="line-height: 4mm;">
-                                        Posts
-                                    </div>
-                                    <div class="row p-0" style="line-height: 4mm;">
-                                        &nbsp; 50
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!--INFORMATION-->
-
-                        <!--BOTTOM LINE WITH ICONS-->
-
-                        <div class="container-fluid row m-1">
-                            <div class="col-sm-3 m-0 p-0"></div>
-                            <div class="col-sm-3 d-flex align-self-center justify-content-end">
-                                <div class="btn-group">
-                                    <button class="btn btn-light btn-sm dropdown-toggle" data-toggle="dropdown">
-                                        Serious
-                                        <span class="caret"></span>
-                                    </button>
-                                    <ul class="dropdown-menu" style="min-width: 20mm">
-                                        <li><a class="dropdown-item m-0 p-1" style="cursor: pointer">Serious</a></li>
-                                        <li><a class="dropdown-item m-0 p-1" style="cursor: pointer">Casual</a></li>
-                                        <li><a class="dropdown-item m-0 p-1" style="cursor: pointer">Very Serious</a>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="col-sm-3 d-flex align-self-center justify-content-end">
-                                <div class="btn-group">
-                                    <button class="btn btn-light btn-sm dropdown-toggle" data-toggle="dropdown">
-                                        Private
-                                        <span class="caret"></span>
-                                    </button>
-                                    <ul class="dropdown-menu" style="min-width: 20mm">
-                                        <li><a class="dropdown-item m-0 p-1" style="cursor: pointer">Private</a></li>
-                                        <li><a class="dropdown-item m-0 p-1" style="cursor: pointer">Public</a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="col-sm-3 d-flex align-self-center justify-content-between">
-                                <a type="button" data-toggle="modal" data-target="#sendInvitationWithTopic">
-                                    <i class="fa-solid fa-envelope"></i></a>
-                                <a type="button" id="editCardButton"><i class="fa-solid fa-file-pen"></i></a>
-                                <a type="button" data-toggle="modal" data-target="#deleteTopicConfirmation">
-                                    <i class="fa-solid fa-trash-can"></i></a>
-                            </div>
-                        </div>
-                        <!--BOTTOM LINE WITH ICONS-->
-
-                    </div>
-                    <!--CARD 1 ENDS HERE-->
-
-                    <!--SUBSCRIPTIONS CARD 2:-> START-->
-                    <div class="row m-1 mt-2 border-bottom">
-
-                        <!--IMAGE-->
-                        <div class="col-sm-2 d-flex align-self-center justify-content-around p-0"
-                            style="line-height:25px;">
-                            <img src="images/taylor.jpeg" class="profile_image">
-                        </div>
-                        <!--IMAGE-->
-
-                        <!--INFORMATION-->
-                        <div class="col-sm-10">
-                            <div class="active row align-self-center justify-content-start">
-                                <div id="noEditTopic" class=" col-sm-12" style="display: block;">
-                                    <h6 id="currentTopicName" class="active p-0 m-0">
-                                        Grails-Topic-1</h6>
-                                </div>
-                                <!-- <div class="row align-self-center justify-content-start"> -->
-                                <div class="editTopic col-sm-6" style="display: none;">
-                                    <input id="newTopicName" type="text" class="form-control-sm"
-                                        style="max-width: 4cm;"></input>
-                                </div>
-                                <div class="editTopic col-sm-3" style="display: none;">
-                                    <div class="row d-flex justify-content-start">
-                                        <button type="button" class="btn btn-outline-success btn"
-                                            style="line-height: 3mm;">Save</button>
-                                    </div>
-                                </div>
-                                <div id="cancelEditTopic" class="editTopic col-sm-3" style="display: none;">
-                                    <div class="row d-flex justify-content-start">
-                                        <button type="button" class="btn btn-outline-danger btn"
-                                            style="line-height: 3mm;">Cancel</button>
-                                    </div>
-                                </div>
-                                <!-- </div> -->
-                            </div>
-                            <div class="row mt-2 d-flex align-self-center justify-content-start p-0">
-                                <div class="col-sm-4 m-0 ">
-                                    <div class="row pl-3" style="line-height: 4mm;">
-                                        @grails
-                                    </div>
-                                    <div class="row p-0" style="line-height: 4mm;">
-                                        <button type="button" class="btn btn-sm pl-3 btn-link">Unsubscribe</button>
-                                    </div>
-                                </div>
-                                <div class="col-sm-4 m-0 ">
-                                    <div class="row p-1" style="line-height: 4mm;">
-                                        Subscriptions
-                                    </div>
-                                    <div class="row p-0" style="line-height: 4mm;">
-                                        &nbsp; 30
-                                    </div>
-                                </div>
-                                <div class="col-sm-4 m-0 ">
-                                    <div class="row p-1" style="line-height: 4mm;">
-                                        Posts
-                                    </div>
-                                    <div class="row p-0" style="line-height: 4mm;">
-                                        &nbsp; 50
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!--INFORMATION-->
-
-                        <!--BOTTOM LINE WITH ICONS-->
-
-                        <div class="container-fluid row m-1">
-                            <div class="col-sm-3 m-0 p-0"></div>
-                            <div class="col-sm-3 d-flex align-self-center justify-content-end">
-                                <div class="btn-group">
-                                    <button class="btn btn-light btn-sm dropdown-toggle" data-toggle="dropdown">
-                                        Serious
-                                        <span class="caret"></span>
-                                    </button>
-                                    <ul class="dropdown-menu" style="min-width: 20mm">
-                                        <li><a class="dropdown-item m-0 p-1" style="cursor: pointer">Serious</a></li>
-                                        <li><a class="dropdown-item m-0 p-1" style="cursor: pointer">Casual</a></li>
-                                        <li><a class="dropdown-item m-0 p-1" style="cursor: pointer">Very Serious</a>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="col-sm-3 d-flex align-self-center justify-content-end">
-                                <div class="btn-group">
-                                    <button class="btn btn-light btn-sm dropdown-toggle" data-toggle="dropdown">
-                                        Private
-                                        <span class="caret"></span>
-                                    </button>
-                                    <ul class="dropdown-menu" style="min-width: 20mm">
-                                        <li><a class="dropdown-item m-0 p-1" style="cursor: pointer">Private</a></li>
-                                        <li><a class="dropdown-item m-0 p-1" style="cursor: pointer">Public</a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="col-sm-3 d-flex align-self-center justify-content-between">
-                                <a type="button" data-toggle="modal" data-target="#sendInvitationWithTopic">
-                                    <i class="fa-solid fa-envelope"></i></a>
-                                <a type="button" id="editCardButton"><i class="fa-solid fa-file-pen"></i></a>
-                                <a type="button" data-toggle="modal" data-target="#deleteTopicConfirmation">
-                                    <i class="fa-solid fa-trash-can"></i></a>
-                            </div>
-                        </div>
-                        <!--BOTTOM LINE WITH ICONS-->
-
-                    </div>
-                    <!--CARD 2 ENDS HERE-->
 
                 </div>
-                <!--SUBSCRIPTIONS TABLE:-> END-->
-
-                <!--TRENDING TABLE START-->
-                <div class="row mt-3" style="border: groove #002fff; border-radius: 3mm;">
-
-                    <!--SUBSCRIPTIONS HEADER ROW-->
-                    <div class="container-fluid row m-0 p-0 d-flex justify-content-between"
-                        style="border-bottom: groove #002fff;">
-
-                        <!--SUBSCRIPTIONS TEXT COLUMN-->
-                        <div class="col-sm-12 d-flex align-self-center justify-content-start table_heads"
-                            style="line-height: 8mm; background-color: rgba(0, 162, 255, 0.171);">
-                            Trending Topics
-                        </div>
-                    </div>
-                    <!--SUBSCRIPTIONS HEADER ROW ENDS HERE-->
-
-                    <!--SUBSCRIPTIONS CARD:-> START-->
-                    <div class="row m-1 mt-2 border-bottom">
-
-                        <!--IMAGE-->
-                        <div class="col-sm-2 d-flex align-self-center justify-content-start p-0"
-                            style="line-height:25px;">
-                            <img src="images/taylor.jpeg" class="profile_image">
-                        </div>
-                        <!--IMAGE-->
-
-                        <!--INFORMATION-->
-                        <div class="col-sm-10">
-                            <div class="row m-0 p-0 d-flex align-self-center justify-content-start p-0">
-                                Grails-Topic
-                            </div>
-                            <div class="row mt-2 d-flex align-self-center justify-content-start p-0">
-                                <div class="col-sm-4 m-0 ">
-                                    <div class="row p-1" style="line-height: 4mm;">
-                                        @grails
-                                    </div>
-                                    <div class="row p-0" style="line-height: 4mm;">
-                                        <button type="button" class="btn btn-sm pl-1 btn-link">Unsubscribe</button>
-                                    </div>
-                                </div>
-                                <div class="col-sm-4 m-0 ">
-                                    <div class="row p-1" style="line-height: 4mm;">
-                                        Subscriptions
-                                    </div>
-                                    <div class="row p-0" style="line-height: 4mm;">
-                                        &nbsp; 30
-                                    </div>
-                                </div>
-                                <div class="col-sm-4 m-0 ">
-                                    <div class="row p-1" style="line-height: 4mm;">
-                                        Posts
-                                    </div>
-                                    <div class="row p-0" style="line-height: 4mm;">
-                                        &nbsp; 50
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!--INFORMATION-->
-
-                        <!--BOTTOM LINE WITH ICONS-->
-
-                        <div class="container-fluid row m-1">
-                            <div class="col-sm-3 m-0 p-0"></div>
-                            <div class="col-sm-3 d-flex align-self-center justify-content-end">
-                                <div class="btn-group">
-                                    <button class="btn btn-light btn-sm dropdown-toggle" data-toggle="dropdown">
-                                        Serious
-                                        <span class="caret"></span>
-                                    </button>
-                                    <ul class="dropdown-menu" style="min-width: 20mm">
-                                        <li><a class="dropdown-item m-0 p-1">Serious</a></li>
-                                        <li><a class="dropdown-item m-0 p-1">Casual</a></li>
-                                        <li><a class="dropdown-item m-0 p-1">Very Serious</a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="col-sm-3 d-flex align-self-center justify-content-end">
-                                <div class="btn-group">
-                                    <button class="btn btn-light btn-sm dropdown-toggle" data-toggle="dropdown">
-                                        Private
-                                        <span class="caret"></span>
-                                    </button>
-                                    <ul class="dropdown-menu" style="min-width: 20mm">
-                                        <li><a class="dropdown-item m-0 p-1">Private</a></li>
-                                        <li><a class="dropdown-item m-0 p-1">Public</a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="col-sm-3 d-flex align-self-center justify-content-between">
-                                <i class="fa-solid fa-envelope"></i>
-                                <i class="fa-solid fa-file-pen"></i>
-                                <i class="fa-solid fa-trash-can"></i>
-                            </div>
-                        </div>
-                        <!--BOTTOM LINE WITH ICONS-->
-
-                    </div>
-                    <!--CARD 1 ENDS HERE-->
-
-                    <!--SUBSCRIPTIONS CARD 2:-> START-->
-                    <div class="row m-1 mt-2 border-bottom">
-
-                        <!--IMAGE-->
-                        <div class="col-sm-2 d-flex align-self-center justify-content-start p-0"
-                            style="line-height:25px;">
-                            <img src="images/taylor.jpeg" class="profile_image">
-                        </div>
-                        <!--IMAGE-->
-
-                        <!--INFORMATION-->
-                        <div class="col-sm-10">
-                            <div class="row m-0 p-0 d-flex align-self-center justify-content-start p-0">
-                                Grails-Topic
-                            </div>
-                            <div class="row mt-2 d-flex align-self-center justify-content-start p-0">
-                                <div class="col-sm-4 m-0 ">
-                                    <div class="row p-1" style="line-height: 4mm;">
-                                        @grails
-                                    </div>
-                                    <div class="row p-0" style="line-height: 4mm;">
-                                        <button type="button" class="btn btn-sm pl-1 btn-link">Unsubscribe</button>
-                                    </div>
-                                </div>
-                                <div class="col-sm-4 m-0 ">
-                                    <div class="row p-1" style="line-height: 4mm;">
-                                        Subscriptions
-                                    </div>
-                                    <div class="row p-0" style="line-height: 4mm;">
-                                        &nbsp; 30
-                                    </div>
-                                </div>
-                                <div class="col-sm-4 m-0 ">
-                                    <div class="row p-1" style="line-height: 4mm;">
-                                        Posts
-                                    </div>
-                                    <div class="row p-0" style="line-height: 4mm;">
-                                        &nbsp; 50
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!--INFORMATION-->
-
-                        <!--BOTTOM LINE WITH ICONS-->
-
-                        <div class="container-fluid row m-1">
-                            <div class="col-sm-3 m-0 p-0"></div>
-                            <div class="col-sm-3 d-flex align-self-center justify-content-end">
-                                <div class="btn-group">
-                                    <button class="btn btn-light btn-sm dropdown-toggle" data-toggle="dropdown">
-                                        Serious
-                                        <span class="caret"></span>
-                                    </button>
-                                    <ul class="dropdown-menu" style="min-width: 20mm">
-                                        <li><a class="dropdown-item m-0 p-1">Serious</a></li>
-                                        <li><a class="dropdown-item m-0 p-1"">Casual</a></li>
-                                        <li><a class=" dropdown-item m-0 p-1">Very Serious</a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="col-sm-3 d-flex align-self-center justify-content-end">
-                                <div class="btn-group">
-                                    <button class="btn btn-light btn-sm dropdown-toggle" data-toggle="dropdown">
-                                        Private
-                                        <span class="caret"></span>
-                                    </button>
-                                    <ul class="dropdown-menu" style="min-width: 20mm">
-                                        <li><a class="dropdown-item m-0 p-1">Private</a></li>
-                                        <li><a class="dropdown-item m-0 p-1">Public</a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="col-sm-3 d-flex align-self-center justify-content-between">
-                                <i class="fa-solid fa-envelope"></i>
-                                <i class="fa-solid fa-file-pen"></i>
-                                <i class="fa-solid fa-trash-can"></i>
-                            </div>
-                        </div>
-                        <!--BOTTOM LINE WITH ICONS-->
-                    </div>
-                    <!--CARD 2 ENDS HERE-->
-
-                </div>
-                <!--TRENDING TABLE:-> END-->
-
-
             </div>
 
-            <div class="col-sm-6">
+            <div class="col-sm-7">
 
                 <!--INBOX: THE BEGINNING-->
                 <div class="container-fluid mt-3 p-0" style="border: groove #002fff; border-radius: 4mm;">
@@ -564,7 +283,12 @@
 
                         <!--INBOX -> VIEW ALL-->
                         <div class="col-sm-6 d-flex flex-row-reverse">
-                            <button type="button" class="btn btn-sm btn-link">View All</button>
+                            <form class="d-flex" role="search">
+                                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search"
+                                    style="border-radius: 3mm;">
+                                <button class="btn btn-outline-success" type="submit" style="border-radius: 3mm;"><i
+                                        class="fa-solid fa-magnifying-glass"></i></button>
+                            </form>
                         </div>
                     </div>
                     <!--INBOX HEADER ROW ENDS HERE-->
@@ -678,83 +402,12 @@
             </div>
 
         </div>
+
+
     </div>
 
 
     <!--MODALS -> DO NOT TOUCH-->
-
-    <!--MODAL:-> CREATE TOPIC-->
-    <div class="modal fade" id="createTopic" tabindex="-1" role="dialog" aria-labelledby="createTopic2"
-        aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered" role="document">
-            <div class="modal-content">
-                <div class="modal-header" style="background-color: rgba(0, 162, 255, 0.26);">
-                    <div class="row modal_heads border m-0 pl-3"
-                        style="line-height:35px; border-radius: 3mm; background-color: rgba(0, 162, 255, 0.171);">
-                        Create Topic &nbsp;
-                    </div>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
-
-                <div class="modal-body">
-                    <div class="container-fluid border mt-3 p-0" style="border-radius: 3mm;">
-                        <div class="row">
-                            <div class="container-fluid m-2" style="width: 90%">
-                                <div class="row">
-                                    <div class="col-sm-5 m-0 d-flex align-self-center justify-content-start">
-                                        <h6 style="margin: 0; margin-left: 1mm; padding: 0; font-weight: bold;">
-                                            Name:
-                                        </h6>
-                                    </div>
-                                    <div class="col">
-                                        <input type="name" id="newTopicName" class="form-control form-control-sm"
-                                            placeholder="Name" />
-                                    </div>
-                                </div>
-                                <div class="row mt-2">
-                                    <div class="col-sm-5 m-0 d-flex align-self-center justify-content-start">
-                                        <h6 style="margin: 0; margin-left: 1mm; padding: 0; font-weight: bold;">
-                                            Visibility:</h6>
-                                    </div>
-                                    <div class="col">
-                                        <div class="btn-group">
-                                            <button class="btn button-outline-secondary btn-sm dropdown-toggle"
-                                                type="button" data-toggle="dropdown" aria-haspopup="true"
-                                                aria-expanded="true">
-                                                Public
-                                            </button>
-                                            <div class="dropdown-menu-sm">
-                                                <div class="dropdown-menu dropdown-menu-right">
-                                                    <button class="btn button-outline-secondary dropdown-item m-0 p-0"
-                                                        type="button">Private</button>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="modal-footer">
-                    <div class="row mt-2">
-                        <div class="col-sm-5">
-                        </div>
-                        <div class="col d-flex align-self-center justify-content-center">
-                            <div class="col-sm-6">
-                                <button type="button" class="btn btn-success btn-sm">Save</button>
-                            </div>
-                            <div class="col-sm-6">
-                                <button type="button" data-dismiss="modal" class="btn btn-danger btn-sm">Cancel</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
 
     <!--MODAL:-> SEND INVITATION-->
     <div class="modal fade" id="sendInvitation" tabindex="-1" role="dialog" aria-labelledby="sendInvitation2"
@@ -790,20 +443,8 @@
                                         <h6 style="margin: 0; margin-left: 1mm; padding: 0; font-weight: bold;">
                                             Topic:</h6>
                                     </div>
-                                    <div class="col">
-                                        <div class="btn-group">
-                                            <button class="btn button-outline-secondary btn-sm dropdown-toggle"
-                                                type="button" data-toggle="dropdown" aria-haspopup="true"
-                                                aria-expanded="true">
-                                                Topic-1
-                                            </button>
-                                            <div class="dropdown-menu-sm">
-                                                <div class="dropdown-menu dropdown-menu-right">
-                                                    <button class="btn button-outline-secondary dropdown-item m-0 p-0"
-                                                        type="button">Topics-n</button>
-                                                </div>
-                                            </div>
-                                        </div>
+                                    <div class="col-sm-5 m-0 pt-2 d-flex align-self-center justify-content-start">
+                                        <h6 id="modalTopic1" style="font-weight: bold; line-height: 5mm;"></h6>
                                     </div>
                                 </div>
                             </div>
@@ -873,20 +514,8 @@
                                         <h6 style="margin: 0; margin-left: 1mm; padding: 0; font-weight: bold;">
                                             Topic:</h6>
                                     </div>
-                                    <div class="col">
-                                        <div class="btn-group">
-                                            <button class="btn button-outline-secondary btn-sm dropdown-toggle"
-                                                type="button" data-toggle="dropdown" aria-haspopup="true"
-                                                aria-expanded="true">
-                                                Topic-1
-                                            </button>
-                                            <div class="dropdown-menu-sm">
-                                                <div class="dropdown-menu dropdown-menu-right">
-                                                    <button class="btn button-outline-secondary dropdown-item m-0 p-0"
-                                                        type="button">Topics-n</button>
-                                                </div>
-                                            </div>
-                                        </div>
+                                    <div class="col-sm-5 m-0 pt-2 d-flex align-self-center justify-content-start">
+                                        <h6 id="modalTopic2" style="font-weight: bold; line-height: 5mm;"></h6>
                                     </div>
                                 </div>
                             </div>
@@ -957,20 +586,8 @@
                                         <h6 style="margin: 0; margin-left: 1mm; padding: 0; font-weight: bold;">
                                             Topic:</h6>
                                     </div>
-                                    <div class="col">
-                                        <div class="btn-group">
-                                            <button class="btn button-outline-secondary btn-sm dropdown-toggle"
-                                                type="button" data-toggle="dropdown" aria-haspopup="true"
-                                                aria-expanded="true">
-                                                Topic-1
-                                            </button>
-                                            <div class="dropdown-menu-sm">
-                                                <div class="dropdown-menu dropdown-menu-right">
-                                                    <button class="btn button-outline-secondary dropdown-item m-0 p-0"
-                                                        type="button">Topics-n</button>
-                                                </div>
-                                            </div>
-                                        </div>
+                                    <div class="col-sm-5 m-0 pt-2 d-flex align-self-center justify-content-start">
+                                        <h6 id="modalTopic3" style="font-weight: bold"></h6>
                                     </div>
                                 </div>
                             </div>
@@ -1098,7 +715,7 @@
         </div>
     </div>
 
-    <script src="dashboard_script.js"></script>
+    <script src="topic.js"></script>
 
 </body>
 

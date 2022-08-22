@@ -44,7 +44,7 @@
 }
 
 .table_heads {
-    line-height: 50%;
+    line-height: 8mm;
     font-weight: bold;
     font-family: "Cambria Math";
     font-size: large;
@@ -74,6 +74,13 @@
     padding-bottom: 0;
     padding-left: 0;
     font-size: x-small;
+}
+
+.links2 {
+    padding-top: 0;
+    padding-bottom: 0;
+    padding-left: 0;
+    font-size: small;
 }
 
 .smaller-text {

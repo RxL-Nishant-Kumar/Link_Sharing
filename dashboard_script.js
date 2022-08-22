@@ -9,19 +9,18 @@ $(document).ready(function () {
 
 
     $("#editCardButton").click(function () {
-        $("#noEditTopic").removeClass("active");
-        $("#noEditTopic").css('display', 'none');
-        $(".editTopic").addClass("active");
-        $(".editTopic").css('display', 'block');
+        $("#noEditCard").removeClass("active");
+        $("#noEditCard").css('display', 'none');
+        $("#editCardForm").addClass("active");
+        $("#editCardForm").css('display', 'block');
     });
 
-    $("#cancelEditTopic").click(function () {
-        $("#noEditTopic").addClass("active");
-        $("#noEditTopic").css('display', 'block');
-        $(".editTopic").removeClass("active");
-        $("#newTopicName").val("");
-        $(".editTopic").css('display', 'none');
-    });
+    $("#cancelEditCard").click(function () {
+        $("#noEditCard").addClass("active");
+        $("#noEditCard").css('display', 'block');
+        $("#editCardForm").removeClass("active");
+        $("#editCardForm").css('display', 'none');
+    }); 
 
 
 }); 
